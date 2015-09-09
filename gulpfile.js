@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 
 var paths = {
   stylesSrc: './stylesheets/src/',
- 	stylesDist: './stylesheets/dist/'
+ 	stylesDist: './stylesheets/'
 };
  
 paths.scripts
