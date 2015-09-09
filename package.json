@@ -1,0 +1,23 @@
+{
+  "name": "cssplayground",
+  "version": "1.0.0",
+  "description": "A place for people to come play with new CSS",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukefrake/cssplayground.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukefrake/cssplayground/issues"
+  },
+  "homepage": "https://github.com/lukefrake/cssplayground#readme"
+}
