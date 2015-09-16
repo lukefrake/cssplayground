@@ -6,4 +6,10 @@ A work in progress for people to come and play with the most up to date CSS.
 
 ` $ bundle install `
 
-` $ bundle exec jekyll serve `
+Run the server:
+
+` $ jekyll serve `
+
+And visit...
+
+`http://localhost:1234/`
