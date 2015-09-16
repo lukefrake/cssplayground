@@ -6,8 +6,8 @@
 
   $(function() {
 
-    var editor = ace.edit('cssArea');
-    var $dumping_ground = $( '#cssDump' );
+    var editor = ace.edit('csspg-gutter');
+    var $dumping_ground = $( '#csspg-dump' );
 
     editor.getSession().setMode('ace/mode/css');
 

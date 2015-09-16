@@ -163,8 +163,13 @@ header {
 	right: -31px;
 }
 
-.cssArea {
-  height: 500px;
+.csspg-gutter.ace_editor {
+  position:absolute;
+  top:0;
+  right:0;
+  width:500px;
+  height:100%;
+  z-index:100;
 }
 .ace_scroller {
   text-align: left;
