@@ -1,0 +1,15 @@
+# Site settings
+title: CSS Playground
+tagline: A place for people to come and tinker with the most up to date CSS
+description: ""
+baseurl: ""
+url: "http://www.cssplayground.co.uk"
+port: 1234
+excerpt_separator: <!--more-->
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["stylesheets/src", "package.json", "README.md", "gulpfile.js", "Gemfile", "Gemfile.lock", "LICENSE-MIT", "params.json"]
