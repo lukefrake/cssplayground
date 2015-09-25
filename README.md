@@ -1,10 +1,18 @@
 # CSS Playground
 
-A work in progress for people to come and play with the most up to date CSS.
+CSS Playground aims to Polyfill as many next CSS features as possible, meaning people can have a play with next CSS now!
 
-# Developing
+## Currently implimented:
 
-` $ bundle install `
+If you have a feature you would like implimented, [make an issue](https://github.com/lukefrake/cssplayground/issues/new).
+
+* `:has()`
+* `:not()`
+* `:local-link()`
+
+## Developing
+
+` $ bundle install; npm i; gulp; `
 
 Run the server:
 
@@ -13,3 +21,4 @@ Run the server:
 And visit...
 
 `http://localhost:1234/`
+

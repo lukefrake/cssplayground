@@ -18,17 +18,66 @@ layout: default
   <span class="bannerFix"></span>
 
   <section class="mainContent">
-    <h3 class="headerInner">
-      <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
-        <span class="octicon octicon-link"></span>
-      </a>
-    </h3>
+    <ul class="mainContent_inner">
+      <li>
+        <h2>:local-link</h2>
+        <p>This pseudo-class is called local link pseudo-class and just selects website-internal links. If an positive parameter is passed to this selector, it's possible to select seperated depths of links. These paths are seperated by slashes (/) and scheme, username, password, port, query string and fragment portions of the URL are not considered when selecting.</p>
+        <pre>
+          :local-link {
+              /* declarations */
+          }
+
+          :local-link(n) {
+              /* declarations */
+          }
+
+          /* Would match / link(s) */
+          :local-link(0) {
+              /* declarations */
+          }
+
+          /* Would match /example/ link(s) */
+          :local-link(1) {
+              /* declarations */
+          }
+        </pre>
+      </li>
+      <li>
+        <h2>:has()</h2>
+        <p>The :has() selector selects all elements that have one or more elements inside of them, that matches the specified selector.</p>
+        <pre>
+          :has( selector ) {
+              /* declarations */
+          }
+
+          li:has( pre ) {
+              /* declarations */
+          }
+        </pre>
+      </li>
+      <li>
+        <h2>:not()</h2>
+        <p>This pseudo-class is called negation pseudo-class which takes as an argument a simple selector list (combination selectors aren't allowed). It matches an element which is not represented by the passed argument and this negations may not be nested within itself like this invalid example: E:not(:not(F))</p>
+        <pre>
+          :not(negation-selector1[, negation-selector2, …]) {
+              /* declarations */
+          }
+
+          a:not([rel="external"], [rel="nofollow"]) {
+              color: red;
+          }
+        </pre>
+      </li>
+    </ul>
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/vendor/polyfill.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/mode-css.js" type="text/javascript"></script>
   <script type="text/javascript" src="javascripts/main.js"></script>
+  <script type="text/javascript" src="javascripts/localLinkPolyfill.js"></script>
+  <script type="text/javascript" src="javascripts/hasPolyfill.js"></script>
+  <script type="text/javascript" src="javascripts/negationPolyfill.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -13,8 +13,22 @@
 
     editor.on( 'change', function( event ) {
       $dumping_ground.html( editor.getValue() );
+      runAllFunctions( window.megaFunctionObject );
     });
 
   });
 
 }));
+
+window.addToObject = function( functionToAdd ) {
+  if( !window.megaFunctionObject ) {
+    window.megaFunctionObject = [];
+  }
+  window.megaFunctionObject.push( functionToAdd );
+}
+
+var runAllFunctions = function( megaFunctionObject ) {
+  $.each( megaFunctionObject, function( index, functionToRun ) {
+    functionToRun();
+  } );
+}
