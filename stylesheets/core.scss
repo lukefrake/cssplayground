@@ -73,6 +73,22 @@ header {
 .mainContent {
 	padding: 20px 82px 0;
 	min-height: 185px;
+	&:before {
+		position: absolute;
+		display: block;
+		height: 197px;
+		width: 550px;
+		padding: 0 60px;
+		margin: 0;
+		background: transparent url(/images/bg-ramp.jpg) center 0 no-repeat;
+		content: "";
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	&_inner {
+		margin-top: 30px;
+	}
 }
 
 .outer {
@@ -101,81 +117,69 @@ header {
 	top: 19px;
 }
 
-.ribbon_inner {
-	position: relative;
-	display: block;
-	background-color: #cd596b;
-	border: 4px solid #7c334f;
-	padding: 2px;
-	z-index: 1;
+.ribbon {
+	&_inner {
+		position: relative;
+		display: block;
+		background-color: #cd596b;
+		border: 4px solid #7c334f;
+		padding: 2px;
+		z-index: 1;
+		h1 {
+			background-color: #7c334f;
+			font-size: 2.5em;
+			font-weight: 800;
+			font-style: normal;
+			text-transform: uppercase;
+			color: #ece4d8;
+			text-align: center;
+			line-height: 1;
+			padding: 14px 20px 0;
+		}
+
+		h2 {
+			background-color: #7c334f;
+			font: bold italic .85em/1.5 Georgia, Times, “Times New Roman”, serif;
+			color: #e69b95;
+			padding-bottom: 14px;
+			margin-top: -3px;
+			text-align: center;
+		}
+	}
+	&_leftTail,
+	&_rightTail {
+		position: relative;
+		display: block;
+		width: 56px;
+		height: 105px;
+		background: transparent url(/images/ribbon-tail-sprite.png) 0 0 no-repeat;
+		position: absolute;
+		bottom: -37px;
+		z-index: 0;
+	}
+	&_leftTail {
+		background-position: 0 0;
+		left: -31px;
+	}
+
+	&_rightTail {
+		background-position: -56px 0;
+		right: -31px;
+	}
 }
 
-.ribbon_inner h1 {
-	background-color: #7c334f;
-	font-size: 2.5em;
-	font-weight: 800;
-	font-style: normal;
-	text-transform: uppercase;
-	color: #ece4d8;
-	text-align: center;
-	line-height: 1;
-	padding: 14px 20px 0;
-}
-
-.ribbon_inner h2 {
-	background-color: #7c334f;
-	font: bold italic .85em/1.5 Georgia, Times, “Times New Roman”, serif;
-	color: #e69b95;
-	padding-bottom: 14px;
-	margin-top: -3px;
-	text-align: center;
-}
-
-.ribbon_leftTail,
-.ribbon_rightTail {
-	position: relative;
-	display: block;
-	width: 56px;
-	height: 105px;
-	background: transparent url(/images/ribbon-tail-sprite.png) 0 0 no-repeat;
-	position: absolute;
-	bottom: -37px;
-	z-index: 0;
-}
-
-.mainContent:before {
-	position: absolute;
-	display: block;
-	height: 197px;
-	width: 550px;
-	padding: 0 60px;
-	margin: 0;
-	background: transparent url(/images/bg-ramp.jpg) center 0 no-repeat;
-	content: "";
-	top: 0;
-	left: 0;
-}
-
-.ribbon_leftTail {
-	background-position: 0 0;
-	left: -31px;
-}
-
-.ribbon_rightTail {
-	background-position: -56px 0;
-	right: -31px;
-}
-
-.csspg-gutter.ace_editor {
-  position:absolute;
-  top:0;
-  right:0;
-  width:500px;
-  height:100%;
-  z-index:100;
-}
-.ace_scroller {
-  text-align: left;
+.ace {
+	&_editor.csspg-gutter {
+	  position:fixed;
+	  top:0;
+	  right:0;
+	  width:500px;
+	  height:100%;
+	  z-index:100;
+	}
+	&_scroller {
+	  text-align: left;
+	}
 }
 
 .headerInner {
